@@ -53,6 +53,7 @@ curl -sL --fail "${WASM_URL}" -o "${TMP_DIR}/tree-sitter.wasm" || {
 }
 
 echo "Installing to /usr/local/bin..."
+mkdir -p /usr/local/bin
 chmod +x "${TMP_DIR}/loon"
 mv "${TMP_DIR}/loon" /usr/local/bin/loon
 mv "${TMP_DIR}/tree-sitter.wasm" /usr/local/bin/tree-sitter.wasm
